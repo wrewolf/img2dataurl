@@ -47,6 +47,7 @@ namespace BydloImgEncoder
                         + System.IO.Path.GetExtension(filename).Replace(".", "")
                         + ";base64,"
                         + Convert.ToBase64String(File.ReadAllBytes(filename)) + "\" />";
+                Clipboard.SetDataObject(encoded.Text);
 
             }
         }
